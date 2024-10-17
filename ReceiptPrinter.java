@@ -12,7 +12,6 @@ public class ReceiptPrinter {
     public static void printReceipt() {
         Scanner scanner = new Scanner(System.in);
 
-        // Prompt for input
         System.out.print("Enter product name: ");
         String productName = scanner.nextLine();
 
@@ -22,15 +21,12 @@ public class ReceiptPrinter {
         System.out.print("Enter quantity: ");
         int quantity = scanner.nextInt();
 
-        // Calculate total price
         double total = price * quantity;
 
-        // Get the current date
         Date date = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE, MMMM dd, yyyy");
         String formattedDate = dateFormat.format(date);
 
-        // Print the receipt
         System.out.println("----------------------------------------------");
         System.out.printf("Name\t\tQty\t\tPrice\t\tTotal%n");
         System.out.println("----\t\t---\t\t-----\t\t-------");
